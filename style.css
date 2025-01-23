@@ -1,357 +1,241 @@
-*{
-    padding: 0;
+/* General Reset */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-html,body{
-    height: 100%;
-    width: 100%;
-}
-#container{
-    height: 100%;
-    width: 100%;
-}
-nav{
-    width: 100vw;
-    height: 10vh;
-    background-color: red;
-    color: white;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* background-color: #f4f4f4; */
+    background-color: black;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Navigation Bar */
+  nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
-#heading>h1:hover{
-    transform: translateX(-10px);
-    color:black;
-    scale: 1.25;
-}
-#links{
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  #heading>h1:hover{
+    color:red;
+    transform: scale(1.2);
+  }
+  #links a {
+    margin: 0 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  #links a:hover{
+    color: blue;
+    transform: scale(1.2);
+    /* font-size: 20px; */
+  }
+  #icon{
     display: flex;
     gap: 20px;
-    font-size: 25px;
-}
-#links>a{
-    text-decoration: none;
-    color: white;
-}
-#links>a:hover{
-    border: 2px solid yellow;
-    padding: 5px 10px;
-    border-radius: 15px;
-    background-color: orange;
-    scale: 1.25;
-}
-#icon{
+  }
+  #icon i {
+    font-size: 1.2rem;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  #icon1:hover{
+    transform: scale(1.2);
+  }
+  #icon2:hover{
+    transform: scale(1.2);
+  }
+  
+  /* Hero Section */
+  #main-heading {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 4px 4px 12px yellow
+
+  }
+  #main-heading p {
+    line-height: 1.8;
+  }
+  /* Secondary Navigation */
+  #links2 {
     display: flex;
-    gap: 50px;
-    font-size: 25px;
-}
-#icon1:hover{
-    scale: 1.45;
-}
-#icon2:hover{
-    scale: 1.45;
-}
-/* hero section */
-#main-heading{
-    width: 70%;
-    /* background-color: yellow; */
-    margin-top: 10%;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 0 20px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    
-}
-#main-heading>pre{
-    font-size: 5vh;
-    text-shadow: 0px 10px 5px yellow;
-}
-/* links2 */
-#links2{
-    width: 70%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 100px;
-    gap: 30px;
-    margin-left: 15%;
-    /* background-colo  r: red; */
-}
-#links2>a{
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-}
-#links2>a:hover{
-    /* scale: 1.45; */
-    transform: translateY(-10px);
-    cursor:pointer;
-    background-color: black;
-    color: aqua;
-    padding: 5px 5px;
-    border-radius: 20px;
+    gap: 15px;
+    margin: 40px 0;
+    /* background-color: red; */
+  }
+  
+  #links2 a {
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #links2 a:hover {
+    background-color: red;
+    transform: scale(1.2);
+  }
+  
+  /* Responsive Image Rows */
+  .row1, .row2, .row3, .row4, .row5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .row1 img, .row2 img, .row3 img, .row4 img, .row5 img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .row1 img:hover, .row2 img:hover, .row3 img:hover, .row4 img:hover, .row5 img:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px yellow;
+    opacity: 0.5;
+  }
+  
+  /* Footer Styling */
+footer {
+    background-color: #222; 
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+   
+  }
+  
+  #navbar-footer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  #logo-heading h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f4a261; 
+  }
+  #logo-heading h1:hover{
+    transform: scale(1.2);
+  }
 
-}
-.row1{
+  
+  #text p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  #relative-link {
     display: flex;
-    width: 100%;
-    height: 350px;
-    /* background-color: red; */
-    margin-top: 100px;
-}
-.row1 .image1{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRax8pVox5neKv5zPLnRd9b9UWEhBYzaDR9-w&s");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row1 .image1:hover{
-    scale: 1.15;
-}
-.row1 .image2{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAq84ojSgkDgSnocMkrSjimDlWyN8EHjIgrw&s");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row1 .image2:hover{
-    scale: 1.15;
-}
-.row1 .image3{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://images.sftcdn.net/images/t_app-icon-m/p/c34c15bf-054c-4287-8c2c-73cef14107c2/3273691428/boys-dp-boy-profile-pictures-logo");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row1 .image3:hover{
-    scale: 1.15;
-}
-.row1 .image4{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt6Lp9njngUAwGucYgGjlN17I5-0ryf7FmtA&s");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row1 .image4:hover{
-    scale: 1.15;
-}
-/* row2 */
-.row2{
-    display: flex;
-    width: 100%;
-    height: 350px;
-    /* background-color: red; */
-    margin-top: 100px;
-}
-.row2 .image5{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://photosqn.com/wp-content/uploads/2024/04/real-girl-pic-photo-images66.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row2 .image5:hover{
-    scale: 1.15;
-}
-.row2 .image6{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://photosbulk.com/wp-content/uploads/instagram-profile-picture-blurry_67.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row2 .image6:hover{
-    scale: 1.15;
-}
-.row2 .image7{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUaD2-zKSjwRW5xykCOTLDbV5aaJvkxlQShQ&s");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row2 .image7:hover{
-    scale: 1.15;
-}
-.row2 .image8{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://i.pinimg.com/236x/63/c8/02/63c802c4d9758e3d5a6c9e95cee34fe7.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row2 .image8:hover{
-    scale: 1.15;
-}
-/* row3 */
-.row3{
-    display: flex;
-    width: 100%;
-    height: 350px;
-    /* background-color: red; */
-    margin-top: 100px;
-}
-.row3 .image9{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://media.istockphoto.com/id/1164736873/photo/silhouette-action-sport-outdoors-of-a-group-of-kids-having-fun-playing-soccer-football-for.jpg?s=612x612&w=0&k=20&c=nTeHF_1btt_PCZ6M5EvcD0vb_thUF6AaMDqNleWo-e4=");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row3 .image9:hover{
-    scale: 1.15;
-}
-.row3 .image10{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://t3.ftcdn.net/jpg/05/10/55/58/360_F_510555809_gSP39J8OgWzaMf21CTnqV7CTXU12rP3K.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row3 .image10:hover{
-    scale: 1.15;
-}
-.row3 .image11{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7hNuohiJvKENSLYO31SfD29I2ITN_spOU4A&s");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row3 .image11:hover{
-    scale: 1.15;
-}
-.row3 .image12{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR7_7Oklw2JoY_n_rwFzlJGQ9lb4DV0SU1ZQ&s");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row3 .image12:hover{
-    scale: 1.15;
-}
-/* row 4 */
-.row4{
-    display: flex;
-    width: 100%;
-    height: 350px;
-    /* background-color: red; */
-    margin-top: 100px;
-}
-.row4 .image13{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://images.pexels.com/photos/1852389/pexels-photo-1852389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row4 .image13:hover{
-    scale: 1.15;
-}
-.row4 .image14{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://images.pexels.com/photos/5380612/pexels-photo-5380612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row4 .image14:hover{
-    scale: 1.15;
-}
-.row4 .image15{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row4 .image15:hover{
-    scale: 1.15;
-}
-.row4 .image16{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://images.pexels.com/photos/5380646/pexels-photo-5380646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row4 .image16:hover{
-    scale: 1.15;
-}
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #relative-link span {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #relative-link span:hover {
+    color: #f4a261;
+    transform: scale(1.2); 
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 932px) {
+    #navbar-footer {
+      flex-direction: column; 
+      text-align: center; 
+    }
+  
+    #logo-heading h1 {
+      font-size: 1.2rem;
+    }
+  
+    #text{
+        margin: 10px 10px;
 
-/* row5 */
-.row5{
-    display: flex;
-    width: 100%;
-    height: 350px;
-    /* background-color: red; */
-    margin-top: 100px;
-}
-.row5 .image17{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://www.shutterstock.com/image-photo/programmer-people-working-laptops-smartphones-600nw-2473384115.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row5 .image17:hover{
-    scale: 1.15;
-}
-.row5 .image18{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?t=st=1737313522~exp=1737317122~hmac=1ab70a4ff7f2fea12dbf0179686d2090a7dc7218587836552a04bf3b9af5b805&w=740");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row5 .image18:hover{
-    scale: 1.15;
-}
-.row5 .image19{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://www.shutterstock.com/image-photo/igniting-innovation-harnessing-power-coding-600nw-2425426569.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row5 .image19:hover{
-    scale: 1.15;
-}
-.row5 .image20{
-    height: 350px;
-    width: 25%;
-    background-image: url("https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?t=st=1737313467~exp=1737317067~hmac=927490a95cae85819144b82da80c36bd09fb306fbb0e53d6e5c4ce72ff90a285&w=740");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.row5 .image20:hover{
-    scale: 1.15;
-}
+    }
+    #text p {
+      font-size: 0.8rem;
+      
+    }
+  
+    #relative-link {
+      gap: 10px; 
+      margin-top: 1px;
+    }
+  
+    #relative-link span {
+      font-size: 1.10rem; 
+    }
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 932px) {
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    #links, #icon {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    #links a {
+      font-size: 0.8rem;
+    }
+  
+    #main-heading {
+      font-size: 1rem;
+    }
+    #links2{
+        display: none;
+    }
+    
+  }
+  
