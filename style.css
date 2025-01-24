@@ -111,7 +111,6 @@
     transform: scale(1.2);
   }
   
-  /* Responsive Image Rows */
   .row1, .row2, .row3, .row4, .row5 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
